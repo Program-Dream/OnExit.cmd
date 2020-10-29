@@ -12,7 +12,7 @@ setlocal enableDelayedExpansion
   for /F "tokens=2 usebackq" %%P IN (`tasklist /NH /FI "WINDOWTITLE eq %title%*"`) do set "PID=%%P"
 
   :: Activating the listener process.
-  wscript runInBackground.vbs "OnExitListener.cmd %PID%" //nologo
+  wscript runInBackground.vbs "OnExitListener.cmd %PID% ^"%~2^"" //nologo
 
 endlocal
 
