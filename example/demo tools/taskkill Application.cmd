@@ -1,0 +1,1 @@
+taskkill /FI "WINDOWTITLE eq Application - BatchProcessManager."
