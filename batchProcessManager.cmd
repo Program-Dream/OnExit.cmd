@@ -1,10 +1,8 @@
 @echo off
 setlocal enableDelayedExpansion
 
-  :: Checking the parameters
+  :: Checking if 2 parameters were given.
   if "%~2"=="" echo:Not enough parameters given. (2 required) & pause & exit
-  if not exist "%~1" echo:The first parameter is not valid file path. & pause & exit
-  if not exist "%~2" echo:The second parameter is not valid file path. & pause & exit
 
   :: Recieving the PID of the batchProcessManager instance itself.
   set "title=bpm[%~n1_%date%_%time%_%random%]"
