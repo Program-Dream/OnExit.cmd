@@ -19,7 +19,6 @@ setlocal enableDelayedExpansion
   wscript runInBackground.vbs "OnExitListener.cmd %PID% ^"%~2^"" //nologo
 
 endlocal
-pause
 
 :: Execute main program now.
 cd /d "%~dp1"
