@@ -15,5 +15,5 @@ setlocal enableDelayedExpansion
 endlocal
 
 :: Execute main program now.
-cd /d "%~dp1"
+if exist "%~dp1" cd /d "%~dp1"
 %1

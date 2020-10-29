@@ -5,5 +5,6 @@
 goto main_loop
 
 :onExit
+  if exist "%~dp2" cd /d "%~dp2"
   %2
 exit
