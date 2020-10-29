@@ -1,4 +1,9 @@
 @echo off
-set "_PID=%~1"
-set "_onExit=%~2"
-set _>log.txt
+
+:main_loop
+  tasklist /NH /FI "PID eq %~1" | findstr "%~1" >nul || goto onExit
+goto main_loop
+
+:onExit
+  %2
+exit
