@@ -9,6 +9,10 @@ setlocal enableDelayedExpansion
   title %title%
   for /F "tokens=2 usebackq" %%P IN (`tasklist /NH /FI "WINDOWTITLE eq %title%*"`) do set "PID=%%P"
 
+  :: Changing the title to a less cryptic one, in case the application 
+  :: decides to use the default title.
+  title %~n1 - BatchProcessManager.
+
   :: Activating the listener process.
   wscript runInBackground.vbs "OnExitListener.cmd %PID% ^"%~2^"" //nologo
 
