@@ -16,7 +16,7 @@ setlocal enableDelayedExpansion
   title %~n1 - BatchProcessManager.
 
   :: Activating the listener process.
-  wscript runInBackground.vbs "OnExitListener.cmd %PID% ^"%~2^"" //nologo
+  wscript "%~dp0runInBackground.vbs" "%~dp0OnExitListener.cmd %PID% ^"%~2^"" //nologo
 
 endlocal
 
