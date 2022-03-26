@@ -18,3 +18,6 @@ batchProcessManager <your-application> <on-exit-action>
   
 ## How it works
 The [batchProcessManager](batchProcessManager.cmd) first finds out his own process identifier (PID) via taklist. Then it starts the [OnExitListener](OnExitListener.cmd) as a new background process using wscripts run command. It will check constantly if the main process, in which the given application will be executed, is still running. If not, the on-exit-action will be executed in the same process as the OnExitListener. As soon as your custom on-exit-action script has terminated, all used processes are closed.
+
+## Credits
+OnExit.cmd has been created by [@timlg07](https://github.com/timlg07), go check his awesome projects!
